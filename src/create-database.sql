@@ -9,4 +9,5 @@ create table info(
 );
 
 insert into info (id, nome, email, celular) 
-values (null, 'Ana Clara', 'anaclara.custodio@estudante.iftm.edu.br', '99999-9999');
+values (null, 'Ana Clara', 'anaclara.custodio@estudante.iftm.edu.br', '99999-9999')
+       (null, 'Carlos Eduardo', 'carlos@iftm.com', '99999-9999');
