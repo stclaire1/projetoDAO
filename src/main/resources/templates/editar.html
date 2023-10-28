@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <title>Editar</title>
@@ -12,21 +12,24 @@
 
 <body class="form-bckg">
     <div class="form-content">
-        <form method="POST" th:action="@{/editar/{id}(id=${cidadaoFind.id})}">
+        <form method="POST" action="cadastro">
             <div class="cadastr0-header">
                 <h2 class="cadastro-title">Editar cidadão</h4>
                     <div class="modal-body">
                         <div class="form-group">
+                            <input type="hidden" class="form-control-register" name="id" th:value="${cidadao.id}">
+                        </div>
+                        <div class="form-group">
                             <label>Nome</label>
-                            <input type="text" class="form-control-register" name="nome" required th:value="${cidadaoFind.nome}">
+                            <input type="text" class="form-control-register" name="nome" required th:value="${cidadao.nome}">
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" class="form-control-register" name="email" required th:value="${cidadaoFind.email}">
+                            <input type="email" class="form-control-register" name="email" required th:value="${cidadao.email}">
                         </div>
                         <div class="form-group">
                             <label>Celular</label>
-                            <input type="text" class="form-control-register" name="celular" required th:value="${cidadaoFind.celular}">
+                            <input type="text" class="form-control-register" name="celular" required th:value="${cidadao.celular}">
                         </div>
                     </div>
             <div class="form-footer">

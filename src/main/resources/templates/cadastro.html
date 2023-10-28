@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <title>Cadastro</title>
@@ -12,7 +12,7 @@
 
 <body class="form-bckg">
     <div class="form-content">
-        <form method="POST" action="cadastrar">
+        <form method="POST" action="cadastro" th:object="${contato}">
             <div class="cadastr0-header">
                 <h2 class="cadastro-title">Adicionar cidadão</h4>
                     <div class="modal-body">

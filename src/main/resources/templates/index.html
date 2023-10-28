@@ -9,7 +9,7 @@
     <title>Página Inicial</title>
 </head>
 <body>
-    <form th:action="@{/contatosParametro}" id="form-search">
+    <form th:action="@{/cidadaosParametro}" id="form-search">
         <input type="text" class="form-control" th:name="nome" placeholder="Buscar cidadão">
         <button type="submit" class="btn btn-primary">Pesquisar</button>
     </form>
@@ -19,7 +19,7 @@
                 <h2>Gerenciamento de <b>Cidadãos</b></h2>
             </div>
             <div class="col-sm-7">
-                <a href="/cadastrar" class="btn" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Adicionar Cidadão</span></a>					
+                <a th:href="@{/cadastro}" class="btn" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Adicionar Cidadão</span></a>					
             </div>
             </div>
         </div>
@@ -38,8 +38,8 @@
                     <td th:text="${cidadao.email}"></td>
                     <td th:text="${cidadao.celular}"></td>
                     <td>
-                        <a th:href="@{'/editar/'+${cidadao.id}}" style="color: blue; margin-right: 10px; text-decoration: none;">Editar</a>
-                        <a th:href="@{'/deletar/'+${cidadao.id}}" style="color: blue; text-decoration: none;">Excluir</a>
+                        <a th:href="@{'/editarCidadao?id=' + ${cidadao.id}}" style="color: blue; margin-right: 10px; text-decoration: none;">Editar</a>
+                        <a th:href="@{'/excluirCidadao?id=' + ${cidadao.id}}" style="color: blue; text-decoration: none;">Excluir</a>
                     </td>
                     <td>
                     </td>
